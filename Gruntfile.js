@@ -413,7 +413,8 @@ module.exports = function (grunt) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
-
+    grunt.registerTask('heroku',
+      ['compass:dist', 'autoprefixer', 'imagemin']);
     grunt.task.run([
       'clean:server',
       'wiredep',
