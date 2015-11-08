@@ -1,6 +1,9 @@
 {
   "name": "projet10lechat",
   "private": true,
+  "scripts": {
+    "postinstall": "grunt uglify",
+    "start": "node server.js"},
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
