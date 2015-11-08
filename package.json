@@ -1,8 +1,5 @@
 {
   "name": "projet10lechat",
-  "private": true,
-  "scripts": {
-  "start": "grunt serve"},
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
