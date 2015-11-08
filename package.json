@@ -2,8 +2,10 @@
   "name": "projet10lechat",
   "private": true,
   "scripts": {
-    "postinstall": "grunt uglify",
-    "start": "grunt serve"},
+    "start": "node index.js",
+    "test": "mocha",
+    "postinstall": "bower install && grunt build"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
