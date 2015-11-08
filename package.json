@@ -2,9 +2,7 @@
   "name": "projet10lechat",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "postinstall": "bower install && grunt build"
-  },
+  "start": "grunt serve"},
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
