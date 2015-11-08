@@ -29,8 +29,8 @@ angular.module('projet10LeChatApp')
       console.log($rootScope);
         //On utilise l'api de PubNub
       PubNub.init({
-        subscribe_key:'sub-c-4d8656ac-85f8-11e5-bf00-02ee2ddab7fe',
-        publish_key:'pub-c-5f5573a7-d911-4e80-80ed-5fbb4bd0507f',
+        subscribe_key:'sub-c-65fd2242-8666-11e5-83e3-02ee2ddab7fe',
+        publish_key:'pub-c-8403d28d-3de8-4a8c-8de7-8c9ec5dff1e9',
         uuid: $rootScope.data.uuid
       });
 

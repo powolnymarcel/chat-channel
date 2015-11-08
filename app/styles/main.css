@@ -11,7 +11,12 @@ body {
   padding: 0;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
 }
-
+.userlabel{
+padding: 10px;
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

@@ -1,4 +1,4 @@
-<h4>Bienvenue <strong>{{data.pseudo}}</strong> , choisissez un chat ci-dessous [<a href="">Deconnexion</a>]</h4>
+<h4>Bienvenue <strong>{{data.pseudo}}</strong> , choisissez un chat ci-dessous [<a href="#/joindre">Deconnexion</a>]</h4>
 <ul class="list-unstyled list-inline">
   <li class="labelchaine" ng-repeat="channel in channels">
     <a href="" class="btn btnchannel" ng-class="{'btn-default' : user != data.pseudo, 'btn-default' : (channel != selectedChannel),'btn-success' : (channel == selectedChannel)}" ng-click="subscribe(channel)">
@@ -35,7 +35,11 @@
     <div class="col-md-2">
       <small class="marker">Utilisateurs:</small>
       <ul class="list-unstyled">
-        <li ng-repeat="utilisateur in utilisateurs"></li>
+        <li ng-repeat="user in users |orderBy: index">
+          <span class="label userlabel" ng-class="{'label-default': user != data.pseudo, 'label-success': (user == data.pseudo)}" title="{{user}}">
+          <i class="fa fa-user"></i>
+{{user}}</span>
+        </li>
       </ul>
     </div>
     <div class="col-md-10">

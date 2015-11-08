@@ -20,10 +20,10 @@ angular.module('projet10LeChatApp')
 
     //Publier
     $scope.publier=function(){
-      if(chat === $scope.selectedChannel){
+      if(!$scope.selectedChannel){
         return;
       }
-      PubNub.publish({
+      PubNub.ngPublish({
         channel:$scope.selectedChannel,
         message:{
           text:$scope.nouveauMessage,
@@ -121,9 +121,9 @@ angular.module('projet10LeChatApp')
 
       $rootScope.$on(PubNub.ngMsgEv($scope.selectedChannel),function(ngEvent,payload){
         var msg;
-        msg=payload.message.user ? "["+ payload.message.user + "]" + payload.message.text: void 0;
+        msg=payload.message.user ? "-=["+ payload.message.user + "]=-  : " + payload.message.text: void 0;
         return $scope.$apply(function(){
-          return $scope.message.unshift(msg);
+          return $scope.messages.unshift(msg);
         });
       });
 
