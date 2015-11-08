@@ -1,0 +1,50 @@
+<h4>Bienvenue {{username}}, choisissez un chat ci-dessous [<a href="">Deconnexion</a>]</h4>
+<ul class="list-unstyled list-inline">
+  <li class="labelchaine" ng-repeat="chaine in chaines"></li>
+  <li class="labelchaine">
+    <a href="" class="btn btn-default" ng-click="montrer = !montrer">
+      <i class="fa fa-magic"></i> Créer un chat.
+    </a>
+  </li>
+
+  <div ng-show="montrer">
+    <form ng-submit="creerChat()">
+      <h5>Créer un chat</h5>
+      <div class="input-group">
+        <input type="text" class="input-sm form-control" ng-model="nouveauChat" placeholder="Le nom du chat"/>
+      <span class="input-group-sm">
+        <input type="submit" class="input-sm btn btn-default" value="C'est parti!"/>
+      </span>
+      </div>
+    </form>
+  </div>
+</ul>
+<br/>
+  <div class="row">
+    <div class="col-md-2">
+      <small class="marker">Utilisateurs:</small>
+      <ul class="list-unstyled">
+        <li ng-repeat="utilisateur in utilisateurs"></li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <form ng-submit="publier()">
+        <div class="input-group">
+          <input type="text" class="input-sm form-control" ng-model="nouveauMessage" placeholder="Le message"/>
+          <span class="input-group-btn">
+            <input type="submit" class="input-sm btn btn-default" value="Envoyer"/>
+          </span>
+        </div>
+      </form>
+      <br/>
+      <div class="well chatbox" id="historiqueChat">
+        <ul class="list-unstyled">
+          <li ng-repeat="message in messages">
+            <i class="fa fa-comment"></i>
+            &nbsp;
+            {{message}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
