@@ -18,6 +18,22 @@ angular.module('projet10LeChatApp')
 
     $scope.channels=[];
 
+    //Publier
+    $scope.publier=function(){
+      if(chat === $scope.selectedChannel){
+        return;
+      }
+      PubNub.publish({
+        channel:$scope.selectedChannel,
+        message:{
+          text:$scope.nouveauMessage,
+          user: $scope.data.pseudo
+        }
+      });
+      $scope.newMessage='';
+
+    }
+
 
     // Créer le chat
       //voir le ng-submit du form dans main.html
@@ -71,7 +87,7 @@ angular.module('projet10LeChatApp')
       }
 
       $scope.selectedChannel=chat;
-      $scope.messages = ['Bienvenue au chat ' + chat];
+      $scope.messages = ['Bienvenue vous etes sur: ' + chat];
 
       PubNub.ngSubscribe({
         channel:$scope.selectedChannel
@@ -136,7 +152,7 @@ PubNub.ngSubscribe({
     });
 
 
-    $scope.nouveauChat='TheWaitingRoom';
+    $scope.nouveauChat='La salle d\'attente';
     return $scope.creerChat();
 
   }]);
