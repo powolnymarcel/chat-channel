@@ -1,6 +1,5 @@
 {
   "name": "projet10lechat",
-  "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
@@ -34,7 +33,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt serve"
   },
   "dependencies": {
     "express": "^4.13.3"
