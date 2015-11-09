@@ -1,3 +1,12 @@
+<h1>Prérequis</h1>
+<p>Avant de continuer il vous faut les éléments suivants : </p>
+
+<ul>
+  <li>Avoir installé <a href="http://nodejs.org/">NodeJS</a> et <a href="https://www.npmjs.com/">NPM</a></li>
+  <li>avoir installé <a href="http://yeoman.io/">yeoman</a> et le <a href="https://github.com/yeoman/generator-angular#usage">générateur generator-yeoman</a></li>
+</ul>
+
+
 #Aperçu
 <img src="http://www.ondego.be/divers/pubnub.png" />
 
