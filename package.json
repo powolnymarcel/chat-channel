@@ -34,9 +34,11 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt serve"
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "bower": "^1.3.5"
+
   }
 }

@@ -413,6 +413,8 @@ module.exports = function (grunt) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
+    grunt.registerTask('heroku:development', 'clean less mincss');
+    grunt.registerTask('heroku:production', 'clean less mincss uglify');
 
     grunt.task.run([
       'clean:server',
