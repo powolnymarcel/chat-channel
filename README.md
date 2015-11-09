@@ -22,3 +22,5 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+<small>*Le tuto était baclé, l'instructeur n'a fait que des copier/coller... Atelier interessant mais très peu instructif...</small>
