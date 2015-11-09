@@ -1,5 +1,6 @@
 {
-  "name": "projet10lechat",
+  "name": "projet10lechat",  "version": "0.0.1",
+
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
