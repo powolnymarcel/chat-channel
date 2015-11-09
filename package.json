@@ -35,7 +35,6 @@
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install ;bower install; grunt build",
-    "start":"grunt serve"
   },
   "dependencies": {
     "express": "^4.13.3",
